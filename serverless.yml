@@ -1,0 +1,14 @@
+service: serverless-hello-world # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  profile: student
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          method: get
+          path: hello
